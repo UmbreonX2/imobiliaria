@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  /* a cada 1rem será considera 10px */
+  font-size: 62.5%;
+}
+
+:root {
+  --color-primary: #252062;
+  --color-secudary: #252273;
+  --color-white: #fff;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+  color: var(--color-white);
+  background: var(--color-white);
+}
+
+/*                 NAVBAR              */
+header {
+  margin-top: 4rem;
+}
+
+.inicio {
+  margin: 5rem;
+  color: #fff;
+  text-decoration:none;
+}
+
+.inicio i svg {
+  color: #252062;
+}
+
+
+/*=============== FORM ==================*/
+#form {
+  width:100%;
+
+  padding: 80px 0;
+  margin:0;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: black;
+}
+
+h1 {
+  color: rgb(75, 75, 75);
+  font-size: 4rem;
+  line-height: 3.8rem;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  color: rgb(75, 75, 75);
+  font-size: 2.8rem;
+  line-height: 3.8rem;
+}
+/*==================FOOTER================*/
+footer {
+  margin-top: 8rem;
+  background: var(--color-primary);
+  font-size: 1.4rem;
+  height: 100%;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 8rem 13rem;
+  gap: 1rem;
+}
+
+.footer-container > div h4 {
+  margin: 2rem 0;
+  font-size: 1.9rem;
+}
+
+
+
+footer ul li {
+  margin-bottom: 1.2rem;  
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+footer ul li a:hover {
+  text-decoration: underline;
+  color: var(--color-white)
+}
+
+.bi-geo-alt-fill {
+  vertical-align: top;
+}
+
+.footer_3 {
+  margin: 0 auto;
+  display: flex;
+  gap: 1.4rem;
+  font-size: 1.6rem;
+}
+
+
+.footer_4 {
+  display: flex;
+  gap: 3rem;
+}
