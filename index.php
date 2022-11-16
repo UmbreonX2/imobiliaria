@@ -120,7 +120,6 @@
               </div>
 
               <div class="form-option">
-                <a>Buscar por Código</a>
                 <button type="submit" class="btn btn-primary">Encontrar</button> 
               </div>
             </div>
@@ -136,24 +135,11 @@
       <section class="cards">
       <?php foreach ($conexao->query ($sql) as $row) { ?>
     
-          <!-- substituir tag a por <form action="visualizarImovel.php" method="post" > -->
+
           <a href="visualizarImovel.php">
             <div class="card">
               <div class="image">
                 <img src="./image/img1.jpg" />
-
-                <!-- tabela imobiliaria
-                coluna imagem varchar(100) 
-                
-                campo imagem, vai armazenar o diretorio e o nome da imagem, exemplo: 'image/ImovelFabricio.png'
-
-                <img src="$row["imagem"]" />
-
-                --form
-                criar input do file content-type imagem
-
-                no submit do seu form, ele vai armazenar a imagem na pasta /image e gravar o caminho da imagem no bd.
-                -->
               </div>
               <div class="content">
                 <p class="title text--medium">

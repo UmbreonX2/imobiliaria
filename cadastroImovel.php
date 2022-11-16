@@ -112,6 +112,7 @@
                   <option value="4">4</option>
                   <option value="5">5 ou +</option>
                 </select>
+                
                 <select class="input-control" name="vagasDescobertas">
                   <option selected>Vagas Descobertas</option>
                   <option value="1">1</option>
