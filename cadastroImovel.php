@@ -22,7 +22,7 @@
   </head>
   <body>
     <header>
-      <a class="inicio" href="/">
+      <a class="inicio" href="index.php">
         <i><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
           <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
         </svg></i>
@@ -53,14 +53,25 @@
                   <option value="2">Apartamento</option>
                   <option value="3">Sala</option>
                 </select>
+                <select class="input-control" name="status">
+                  <option selected>Situação do Imóvel</option>
+                  <option value="1">Venda</option>
+                  <option value="2">Alugar</option>
+                </select>
               </div>
 
               <div class="form-group">
                 <input class="input-control" placeholder="Endereço" name="endereco" />
+                <input class="input-control" placeholder="Número" name="numero" />
               </div>
 
               <div class="form-group">
-                <input class="input-control" placeholder="Área útil/construída" name="areaConstruida"/>
+                <input class="input-control" placeholder="Bairro" name="bairro" />
+                <input class="input-control" placeholder="Cidade" name="cidade" />
+                <input class="input-control" placeholder="Estado Ex: SP" name="estado" />
+              </div>
+
+              <div class="form-group">
                 <input class="input-control" placeholder="Área total/Terreno" name="areaTerreno" />
               </div>
 
@@ -73,6 +84,15 @@
                   <option value="4">4</option>
                   <option value="5">5 ou +</option>
                 </select>
+                <select class="input-control" name="banheiros">
+                  <option selected>Banheiros</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 ou +</option>
+                </select>
+
                 <select class="input-control" name="suites">
                   <option selected>Suítes</option>
                   <option value="1">1</option>
@@ -85,7 +105,7 @@
 
               <div class="form-group">
                 <select class="input-control" name="vagasCobertas">
-                  <option selected>Vagas cobertas</option>
+                  <option selected>Vagas Cobertas</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -100,6 +120,10 @@
                   <option value="4">4</option>
                   <option value="5">5 ou +</option>
                 </select>
+              </div>
+
+              <div class="form-group">
+                <input class="input-control" placeholder="Valor do Imóvel (Preço da venda ou Locação)" name="valorImovel" />
               </div>
 
               <div class="form-group">

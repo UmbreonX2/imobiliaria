@@ -16,18 +16,24 @@
 		$email = $_POST["email"];
 		$tipo = $_POST["tipo"];
 		$endereco = $_POST["endereco"];
-		$areaConstruida = $_POST["areaConstruida"];
 		$areaTerreno = $_POST["areaTerreno"];
 		$dormitorios = $_POST["dormitorios"];
 		$suites = $_POST["suites"];
 		$vagasCobertas = $_POST["vagasCobertas"];
 		$vagasDescobertas = $_POST["vagasDescobertas"];
 		$observacao = $_POST["observacao"];
+		// $status = $_POST["status"];
+		$numero = $_POST["numero"];
+		$bairro = $_POST["bairro"];
+		$cidade = $_POST["cidade"];
+		$estado = $_POST["estado"];
+		$banheiros = $_POST["banheiros"];
+		$valorImovel = $_POST["valorImovel"];
 
 		if($conexao == false) {
 			echo "<h2>Error ao conectar com o banco de dados</h2>";
 	} else {
-		mysqli_query($conexao, "insert into imoveis values (null, '" . utf8_decode($nome) ."','" . $celular ."','" . $telefone ."','" . $email ."','" . $tipo ."','" . $endereco ."','" . $areaConstruida ."','" . $areaTerreno ."','" . $dormitorios ."','" . $suites ."','" . $vagasCobertas ."','" . $vagasDescobertas ."','" . utf8_decode($observacao) ."')");
+		mysqli_query($conexao, "insert into imoveis values (null, '" . utf8_decode($nome) ."','" . $celular ."','" . $telefone ."','" . $email ."','" . $tipo ."','" . $endereco ."','" . $areaTerreno ."','" . $dormitorios ."','" . $suites ."','" . $vagasCobertas ."','" . $vagasDescobertas ."','" . utf8_decode($observacao) ."','" . $numero ."','" . $bairro ."','" . $cidade ."','" . $estado ."','" . $banheiros ."','" . $valorImovel ."')");
 		echo "Imóvel cadastrado com sucesso"; 
 	}
 	mysqli_close($conexao)
