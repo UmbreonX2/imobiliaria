@@ -55,7 +55,7 @@
     </header>
 
       <section class="home">
-        <form class="form-home" action="imoveisVenda.php">
+        <form class="form-home" action="imoveisVenda.php" method="post">
           <fieldset class="shadow-block">
             <legend class="shadow-block">Encontre seu imóvel</legend>
             
@@ -66,7 +66,7 @@
                   Tipo
                 </label>
 
-                <select class="form-select">
+                <select class="form-select" name="tipo">
                   <option selected></option>
                   <option value="1">Casa</option>
                   <option value="2">Apartamento</option>
@@ -77,16 +77,13 @@
               <div class="form-input">
                 <label>
                   <i></i>
-                  Valor
+                  Status
                 </label>
 
-                <select class="form-select">
+                <select class="form-select" name="status">
                   <option selected></option>
-                  <option value="1">Até R$ 100.000</option>
-                  <option value="2">Até R$ 200.000</option>
-                  <option value="3">Até R$ 300.000</option>
-                  <option value="4">Até R$ 400.000</option>
-                  <option value="5">Acima de R$ 500.000</option>
+                  <option value="1">Venda</option>
+                  <option value="2">Aluguel</option>
                 </select>
               </div>
 
@@ -96,7 +93,7 @@
                   Dormitórios
                 </label>
 
-                <select class="form-select">
+                <select class="form-select" name="dormitorios">
                   <option selected></option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -112,7 +109,7 @@
                   Localização
                 </label>
 
-                <select class="form-select">
+                <select class="form-select" name="cidade">
                   <option selected></option>
                   <option value="1">Rio Claro</option>
                   <option value="2">Santa Gertrudes</option>
