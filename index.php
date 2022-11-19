@@ -67,10 +67,9 @@
                 </label>
 
                 <select class="form-select" name="tipo">
-                  <option selected></option>
-                  <option value="1">Casa</option>
-                  <option value="2">Apartamento</option>
-                  <option value="3">Sala</option>
+                  <option value="Casa">Casa</option>
+                  <option value="Apartamento">Apartamento</option>
+                  <option value="Sala">Sala</option>
                 </select>
               </div>
 
@@ -81,7 +80,6 @@
                 </label>
 
                 <select class="form-select" name="status">
-                  <option selected></option>
                   <option value="1">Venda</option>
                   <option value="2">Aluguel</option>
                 </select>
@@ -94,7 +92,6 @@
                 </label>
 
                 <select class="form-select" name="dormitorios">
-                  <option selected></option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -110,9 +107,8 @@
                 </label>
 
                 <select class="form-select" name="cidade">
-                  <option selected></option>
-                  <option value="1">Rio Claro</option>
-                  <option value="2">Santa Gertrudes</option>
+                  <option value="Rio Claro">Rio Claro</option>
+                  <option value="Santa Gertrudes">Santa Gertrudes</option>
                 </select>
               </div>
 

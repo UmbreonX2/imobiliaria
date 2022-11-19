@@ -1,12 +1,30 @@
 <?php 
     include('conexao.php');
+    
+    if(isset($_POST)) {
+      if (isset($_POST["tipo"])) {
+          $tipo = $_POST["tipo"];
+          echo $tipo;
+      }
+  
+      if (isset($_POST["dormitorios"])) {
+        $dormitorios = $_POST["dormitorios"];
+        echo $dormitorios;
+      }
+  
+      if (isset($_POST["cidade"])) {
+        $cidade = $_POST["cidade"];
+        echo $cidade;
+      }
 
-    $tipo = $_POST["tipo"];
-		// $status = $_POST["status"];
-		// $dormitorios = $_POST["dormitorios"];
-		// $cidade = $_POST["cidade"];
+      if (isset($_POST["status"])) {
+        $cidade = $_POST["status"];
+        echo $cidade;
+      }
+   
+      $search = "SELECT * FROM imoveis WHERE tipo = '" . $tipo . "' AND dormitorios >= " . $dormitorios . " AND cidade = '" . $cidade . "'";
 
-    $search = 'SELECT * FROM imoveis WHERE tipo = $tipo';
+    }
 ?>
 
 
@@ -208,10 +226,12 @@
               </div>
             </fieldset>
           </form>
+
+          
         
           <div class="cards">
           <?php foreach ($conexao->query ($search) as $row) { ?>
-    
+            
             <a href="visualizarImovel.php">
               <div class="card">
                 <div class="image">

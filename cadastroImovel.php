@@ -49,9 +49,9 @@
               <div class="form-group">
                 <select class="input-control" name="tipo">
                   <option selected>Tipo</option>
-                  <option value="1">Casa</option>
-                  <option value="2">Apartamento</option>
-                  <option value="3">Sala</option>
+                  <option value="Casa">Casa</option>
+                  <option value="Apartamento">Apartamento</option>
+                  <option value="Sala">Sala</option>
                 </select>
                 <select class="input-control" name="status">
                   <option selected>Situação do Imóvel</option>
