@@ -80,8 +80,8 @@
                 </label>
 
                 <select class="form-select" name="status">
-                  <option value="1">Venda</option>
-                  <option value="2">Aluguel</option>
+                  <option value="Venda">Venda</option>
+                  <option value="Alugar">Alugar</option>
                 </select>
               </div>
 
@@ -107,8 +107,8 @@
                 </label>
 
                 <select class="form-select" name="cidade">
-                  <option value="Rio Claro">Rio Claro</option>
-                  <option value="Santa Gertrudes">Santa Gertrudes</option>
+                  <option value="Rio Claro/SP">Rio Claro</option>
+                  <option value="Santa Gertrudes/SP">Santa Gertrudes</option>
                 </select>
               </div>
 
@@ -136,8 +136,7 @@
               </div>
               <div class="content">
                 <p class="title text--medium">
-                  <?= $row["cidade"] ?> <p>, </p>
-                  <?= $row["estado"] ?> 
+                  <?= $row["cidade"] ?>
               </div>
 
               <div class="price">

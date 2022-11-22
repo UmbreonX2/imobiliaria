@@ -53,10 +53,10 @@
                   <option value="Apartamento">Apartamento</option>
                   <option value="Sala">Sala</option>
                 </select>
-                <select class="input-control" name="status">
+                <select class="input-control" name="statusImovel">
                   <option selected>Situação do Imóvel</option>
-                  <option value="1">Venda</option>
-                  <option value="2">Alugar</option>
+                  <option value="Venda">Venda</option>
+                  <option value="Alugar">Alugar</option>
                 </select>
               </div>
 
@@ -67,8 +67,11 @@
 
               <div class="form-group">
                 <input class="input-control" placeholder="Bairro" name="bairro" />
-                <input class="input-control" placeholder="Cidade" name="cidade" />
-                <input class="input-control" placeholder="Estado Ex: SP" name="estado" />
+                <select class="input-control" name="cidade">
+                  <option selected>Cidade</option>
+                  <option value="Rio Claro/SP">Rio Claro</option>
+                  <option value="Santa Gertrudes/SP">Santa Gertrudes</option>
+                </select>
               </div>
 
               <div class="form-group">

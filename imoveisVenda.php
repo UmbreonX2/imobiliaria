@@ -18,13 +18,13 @@
       }
 
       if (isset($_POST["status"])) {
-        $cidade = $_POST["status"];
-        echo $cidade;
+        $statusImovel = $_POST["status"];
+        echo $statusImovel;
       }
    
-      $search = "SELECT * FROM imoveis WHERE tipo = '" . $tipo . "' AND dormitorios >= " . $dormitorios . " AND cidade = '" . $cidade . "'";
-
     }
+
+    $search = "SELECT * FROM imoveis WHERE tipo = '" . $tipo . "' AND dormitorios >= " . $dormitorios . " AND cidade = '" . $cidade . "' AND statusImovel = '" . $statusImovel . "'";
 ?>
 
 
@@ -231,16 +231,14 @@
         
           <div class="cards">
           <?php foreach ($conexao->query ($search) as $row) { ?>
-            
-            <a href="visualizarImovel.php">
+            <a href='visualizarImovel.php?id=<?php echo $row["idImoveis"] ?>'>
               <div class="card">
                 <div class="image">
                   <img src="./image/img1.jpg" />
                 </div>
                 <div class="content">
                   <p class="title text--medium">
-                    <?= $row["cidade"] ?> <p>, </p>
-                    <?= $row["estado"] ?> 
+                    <?= $row["cidade"] ?>
                 </div>
 
                 <div class="price">
