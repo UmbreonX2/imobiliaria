@@ -32,24 +32,24 @@
       <main>
         <section id="form">
 
-            <form action="recebido.php">
+            <form action="inserirEncomende.php" method="POST">
               <h3>Encomende seu imóvel</h3>
 
               <div class="form-group">
-                <textarea class="input-control" placeholder="Ex: Desejo uma casa com dois Dormitórios, garagem com 2 vagas, no bairro..."></textarea>
+                <textarea class="input-control" placeholder="Ex: Desejo uma casa com dois Dormitórios, garagem com 2 vagas, no bairro..." name="obs"></textarea>
               </div>
 
               <div class="form-group">
-                <input class="input-control" placeholder="Nome" />
+                <input class="input-control" placeholder="Nome" name="nome"/>
               </div>
 
               <div class="form-group">
-                <input class="input-control" placeholder="Celular" />
-                <input class="input-control" placeholder="Telefone" />
+                <input class="input-control" placeholder="Celular" name="celular"/>
+                <input class="input-control" placeholder="Telefone" name="telefone"/>
               </div>
   
               <div class="form-group">
-                <input type="email" class="input-control" placeholder="Email" />
+                <input type="email" class="input-control" placeholder="Email" name="email"/>
               </div>
       
               <div class="form-group">

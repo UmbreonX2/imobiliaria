@@ -10,15 +10,16 @@
 <?php
 		include('conexao.php');
 
+		$obs = $_POST["obs"];
 		$nome = $_POST["nome"];
-		$email = $_POST["email"];
+		$celular = $_POST["celular"];
 		$telefone = $_POST["telefone"];
-		$endereco = $_POST["endereco"];
+		$email = $_POST["email"];
 
 		if($conexao == false) {
 			echo "<h2>Error ao conectar com o banco de dados</h2>";
 	} else {
-		mysqli_query($conexao, "insert into contato values (null, '" . utf8_decode($nome) ."','" . $email ."','" . $telefone ."','" . $endereco ."')");
+		mysqli_query($conexao, "insert into encomende values (null, '" . utf8_decode($obs) ."','" . utf8_decode($nome) ."','" . $celular ."','" . $telefone ."','" . $email ."')");
 		echo "Contato cadastrado com sucesso"; 
 	}
 	mysqli_close($conexao)

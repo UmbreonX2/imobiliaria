@@ -4,27 +4,24 @@
     if(isset($_POST)) {
       if (isset($_POST["tipo"])) {
           $tipo = $_POST["tipo"];
-          echo $tipo;
       }
   
       if (isset($_POST["dormitorios"])) {
         $dormitorios = $_POST["dormitorios"];
-        echo $dormitorios;
       }
   
       if (isset($_POST["cidade"])) {
         $cidade = $_POST["cidade"];
-        echo $cidade;
       }
 
       if (isset($_POST["status"])) {
         $statusImovel = $_POST["status"];
-        echo $statusImovel;
       }
    
     }
 
     $search = "SELECT * FROM imoveis WHERE tipo = '" . $tipo . "' AND dormitorios >= " . $dormitorios . " AND cidade = '" . $cidade . "' AND statusImovel = '" . $statusImovel . "'";
+
 ?>
 
 
@@ -91,7 +88,7 @@
         </div>
 
         <div class="search-results">
-          <form class="form-home">
+          <form class="form-home" action="imoveisVenda.php" method="POST">
             <fieldset class="shadow-block">
               
               <div class="form-group">
@@ -101,13 +98,24 @@
                     Tipo
                   </label>
 
-                  <select class="form-select">
-                    <option selected></option>
-                    <option value="1">Casa</option>
-                    <option value="2">Apartamento</option>
-                    <option value="3">Sala</option>
+                  <select class="form-select" name="tipo">
+                    <option value="Casa">Casa</option>
+                    <option value="Apartamento">Apartamento</option>
+                    <option value="Sala">Sala</option>
                   </select>
                 </div>
+
+                <div class="form-input">
+                <label>
+                  <i></i>
+                  Status
+                </label>
+
+                <select class="form-select" name="status">
+                  <option value="Venda">Venda</option>
+                  <option value="Alugar">Alugar</option>
+                </select>
+              </div>
 
                 <div class="form-input">
                   <label>
@@ -115,26 +123,9 @@
                     Localização
                   </label>
 
-                  <select class="form-select">
-                    <option selected></option>
-                    <option value="1">Rio Claro</option>
-                    <option value="2">Santa Gertrudes</option>
-                  </select>
-                </div>
-
-                <div class="form-input">
-                  <label>
-                    <i></i>
-                    Valor
-                  </label>
-
-                  <select class="form-select">
-                    <option selected></option>
-                    <option value="1">Até R$ 100.000</option>
-                    <option value="2">Até R$ 200.000</option>
-                    <option value="3">Até R$ 300.000</option>
-                    <option value="4">Até R$ 400.000</option>
-                    <option value="5">Acima de R$ 500.000</option>
+                  <select class="form-select" name="cidade">
+                    <option value="Rio Claro/SP">Rio Claro</option>
+                    <option value="Santa Gertrudes/SP">Santa Gertrudes</option>
                   </select>
                 </div>
 
@@ -144,8 +135,7 @@
                     Dormitórios
                   </label>
 
-                  <select class="form-select">
-                    <option selected></option>
+                  <select class="form-select" name="dormitorios">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -153,72 +143,6 @@
                     <option value="5">5 ou +</option>
                   </select>
                 </div>
-
-                <div class="form-input">
-                  <label>
-                    <i></i>
-                    Suítes
-                  </label>
-
-                  <select class="form-select">
-                    <option selected></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 ou +</option>
-                  </select>
-                </div>
-
-                <div class="form-input">
-                  <label>
-                    <i></i>
-                    Banheiros
-                  </label>
-
-                  <select class="form-select">
-                    <option selected></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 ou +</option>
-                  </select>
-                </div>
-
-                <div class="form-input">
-                  <label>
-                    <i></i>
-                    Área
-                  </label>
-
-                  <select class="form-select">
-                    <option selected></option>
-                    <option value="1">Até 100m²</option>
-                    <option value="2">Até 200m²</option>
-                    <option value="3">Até 300m²</option>
-                    <option value="4">Até 400m²</option>
-                    <option value="5">Até 500m²</option>
-                    <option value="5">Acima de 500m²</option>
-                  </select>
-                </div>
-
-                <div class="form-input">
-                  <label>
-                    <i></i>
-                    Código
-                  </label>
-
-                  <select class="form-select">
-                    <option selected></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 ou +</option>
-                  </select>
-                </div>
-
 
                 <div class="form-option">
                   <button type="submit" class="btn btn-primary">Encontrar</button> 
