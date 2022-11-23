@@ -22,6 +22,9 @@
 
     $search = "SELECT * FROM imoveis WHERE tipo = '" . $tipo . "' AND dormitorios >= " . $dormitorios . " AND cidade = '" . $cidade . "' AND statusImovel = '" . $statusImovel . "'";
 
+    
+
+    $qtdeImoveis = mysqli_num_rows($conexao->query ($search));
 ?>
 
 
@@ -84,7 +87,7 @@
     <main>
       <div class="results-block">
         <div class="text_title">
-          <h1> 23 Imoveis à venda para a sua busca</h1>
+          <h1> <?= $qtdeImoveis?> Imoveis à venda para a sua busca</h1>
         </div>
 
         <div class="search-results">
@@ -155,6 +158,7 @@
         
           <div class="cards">
           <?php foreach ($conexao->query ($search) as $row) { ?>
+
             <a href='visualizarImovel.php?id=<?php echo $row["idImoveis"] ?>'>
               <div class="card">
                 <div class="image">
