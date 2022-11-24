@@ -18,7 +18,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./css/styleContato.css"/>
+    <link rel="stylesheet" href="./css/styleContato.css" />
 
   </head>
   <body>

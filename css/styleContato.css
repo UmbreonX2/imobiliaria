@@ -256,7 +256,7 @@ footer {
   margin-top: 8rem;
   background: var(--color-primary);
   font-size: 1.4rem;
-  height: 100px;
+  height: 100%;
 }
 
 .footer-container {
@@ -271,15 +271,12 @@ footer {
   font-size: 1.9rem;
 }
 
-
-
 footer ul li {
   margin-bottom: 1.2rem;  
 }
 
 footer ul li a {
   text-decoration: none;
-  color: var(--color-white);
 }
 footer ul li a:hover {
   text-decoration: underline;
